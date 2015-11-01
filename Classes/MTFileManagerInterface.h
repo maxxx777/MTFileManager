@@ -12,12 +12,12 @@
 @protocol MTFileManagerInterface <NSObject>
 
 - (void)downloadFileWithURL:(NSURL * _Nonnull)url
-                 completion:(MTFileManagerDownloadFileCompletionBlock)completionBlock;
+                 completion:(MTFileManagerDownloadFileCompletionBlock _Nullable)completionBlock;
 - (void)readJSONFromFileWithName:(NSString * _Nonnull)fileName
-                      completion:(MTFileManagerReadJSONCompletionBlock)completionBlock;
+                      completion:(MTFileManagerReadJSONCompletionBlock _Nullable)completionBlock;
 - (void)saveFileWithData:(NSData * _Nonnull)data
-              completion:(MTFileManagerSaveFileCompletionBlock)completionBlock;
+              completion:(MTFileManagerSaveFileCompletionBlock _Nullable)completionBlock;
 - (void)removeFileWithName:(NSString * _Nonnull)fileName
-                completion:(MTFileManagerRemoveFileCompletionBlock)completionBlock;
+                completion:(MTFileManagerRemoveFileCompletionBlock _Nullable)completionBlock;
 
 @end
